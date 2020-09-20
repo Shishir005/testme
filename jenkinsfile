@@ -10,12 +10,37 @@ pipeline {
                 echo 'initialization, '
                     script {
 
-                    sh 'python ./plan.py'
+                    sh 'terraform init'
 
                     }
 
             }
         }
+        stage ('plan') {
+            agent any
 
+            steps {
+                echo 'plan, '
+                    script {
+
+                    sh 'terraform plan'
+
+                    }
+
+            }
+        }
+        stage ('apply') {
+            agent any
+
+            steps {
+                echo 'apply, '
+                    script {
+
+                    sh 'terraform apply'
+
+                    }
+
+            }
+        }
     }
 }
