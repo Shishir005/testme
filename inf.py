@@ -1,2 +1,2 @@
 import subprocess
-process = ['/usr/local/bin/terraform', 'init']
+p = subprocess.Popen(['/usr/local/bin/terraform', 'init'])
