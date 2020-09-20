@@ -3,17 +3,43 @@ pipeline {
 
     stages {
 
-        stage ('Hello') {
+        stage ('initialization') {
             agent any
 
             steps {
-                echo 'Hello, '
+                echo 'initialization, '
                     script {
-                    
+
                     sh 'python ./inf.py'
-                    
+
                     }
-                
+
+            }
+        }
+        stage ('plan') {
+            agent any
+
+            steps {
+                echo 'plan, '
+                    script {
+
+                    sh 'python ./plan.py'
+
+                    }
+
+            }
+        }
+        stage ('apply') {
+            agent any
+
+            steps {
+                echo 'apply, '
+                    script {
+
+                    sh 'python ./apply.py'
+
+                    }
+
             }
         }
     }
