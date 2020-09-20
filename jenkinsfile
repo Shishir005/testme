@@ -10,7 +10,7 @@ pipeline {
                 echo 'initialization, '
                     script {
 
-                    sh 'terraform init'
+                    sh './terraform init'
 
                     }
 
@@ -23,7 +23,7 @@ pipeline {
                 echo 'plan, '
                     script {
 
-                    sh 'terraform plan'
+                    sh './terraform plan'
 
                     }
 
@@ -36,7 +36,7 @@ pipeline {
                 echo 'apply, '
                     script {
 
-                    sh 'terraform apply'
+                    sh './terraform apply'
 
                     }
 
