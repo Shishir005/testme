@@ -1,3 +1,3 @@
-#!/user/bin/env bash
+#!/user/bin/
 import subprocess
 process = ['/usr/local/bin/terraform', 'init']  
