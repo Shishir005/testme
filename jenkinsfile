@@ -1,0 +1,20 @@
+pipeline {
+    agent none
+
+    stages {
+
+        stage ('Hello') {
+            agent any
+
+            steps {
+                echo 'Hello, '
+                    script {
+                    
+                    sh 'python ./inf.py'
+                    
+                    }
+                
+            }
+        }
+    }
+}
